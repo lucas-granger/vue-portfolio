@@ -58,7 +58,7 @@
         icon.classList.toggle("open");
       },
       openResume() {
-        window.open('./resume-example.pdf');
+        window.open('./CV-Lucas.pdf');
       },
       locResume() {
         location.href = './contact'
