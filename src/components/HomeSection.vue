@@ -1,9 +1,9 @@
-<!-- <template>
+<template>
   <nav id = "desktop-nav">
     <div class="logo">Lucas Granger</div>
     <div>
       <ul class="nav-links">
-        <li><a href="/">About</a></li>
+        <li><a href="/about">About</a></li>
         <li><a href="/experience">Experience</a></li>
         <li><a href="/projects">Projects</a></li>
         <li><a href="/contact">Contact</a></li>
@@ -19,7 +19,7 @@
         <span></span>
       </div>
       <div class="menu-links">
-        <li><a href="/" @click="toggleMenu">About</a></li>
+        <li><a href="/about" @click="toggleMenu">About</a></li>
         <li><a href="/experience" @click="toggleMenu">Experience</a></li>
         <li><a href="/projects" @click="toggleMenu">Projects</a></li>
         <li><a href="/contact" @click="toggleMenu">Contact</a></li>
@@ -44,34 +44,6 @@
       </div>
     </div>
   </section>
-  <section id="about">
-    <p class="section__text__p1">Get To Know More</p>
-    <h1 class="title">About Me</h1>
-    <div class="section-container">
-      <div class="section__pic-container">
-        <img src="@/assets/about-pic.png" alt="Profile picture" class="about-pic">
-      </div>
-      <div class="about-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <img src="@/assets/experience.png" alt="Experience Icon" class="icon">
-            <h3>Experience</h3>
-            <p>2+ years <br />Frontend Development</p>
-          </div>
-          <div class="details-container">
-          <img src="@/assets/education.png" alt="Education Icon" class="icon">
-            <h3>Education</h3>
-            <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
-          </div>
-        </div>
-        <div class="text-container">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro asperiores ratione veniam qui rerum vitae, quis odio assumenda neque sunt odit obcaecati optio iste architecto fugit aliquam nam laboriosam necessitatibus quas molestias impedit reiciendis cupiditate aperiam ab. Sunt corrupti optio, cumque eos cum animi impedit sapiente mollitia accusantium dolores! Ipsum!</p>
-        </div>
-      </div>
-    </div>
-    <img src="@/assets/arrow.png" alt="Arrow-icon" class="icon arrow" @click="locExp">
-  </section>
-  <router-view/>
 </template>
 
 <script>
@@ -96,10 +68,7 @@
       },
       locGitHub() {
         location.href='https://github.com/lucas-granger'
-      },
-      locExp() {
-        location.href = './experience'
-      },
+      }
     },
   }
 </script>
@@ -112,9 +81,6 @@
 * {
   margin: 0;
   padding: 0;
-}
-
-#app {
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
 }
@@ -185,13 +151,118 @@ a:hover {
   cursor: pointer;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1400px) {
+  #profile {
+    height: 83vh;
+    margin-bottom: 6rem;
+  }
+
+  .about-containers {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 1200px) {
   #desktop-nav {
     display: none;
   }
 
   #hamburger-nav {
     display: flex;
+  }
+
+  #experience, .experience-details-conatainer {
+    margin-top: 2rem;
+  }
+
+  #profile, .section-container {
+    display: block;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  section, .section-container {
+    height: fit-content;
+  }
+
+  section {
+    margin: 0 5%;
+  }
+
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 aauto 2rem;
+  }
+
+  .about-containers {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #contact, footer {
+    height: 40vh;
+  }
+
+  #profile {
+    height: 83vh;
+    margin-bottom: 0;
+  }
+
+  article {
+    font-size: 1rem;
+  }
+
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+
+  .about-containers, .contact-info-upper-container, .btn-container {
+    flex-wrap: wrap;
+  }
+
+  .contact-info-container {
+    margin: 0;
+  }
+
+  .contact-info-container p, .nav-links li a {
+    font-size: 1rem;
+  }
+
+  .experience-sub-title {
+    font-size: 1.25rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .section__pic-container {
+    width: auto;
+    height: 46vw;
+    justify-content: center;
+  }
+
+  .section__text__p2 {
+    font-size: 1.25rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .text-container {
+    text-align: justify;
   }
 }
 
@@ -362,83 +433,4 @@ section {
 .btn-container {
   gap: 1rem;
 }
-
-/*------------------------ABOUT--------------------------*/
-#about {
-    position: relative;
-  }
-
-  .about-containers {
-    gap: 2rem;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-  }
-
-  .about-details-container {
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .about-containers, .about-details-container {
-    display: flex;
-  }
-
-  .about-pic {
-    border-radius: 2rem;
-  }
-
-  .arrow {
-    position: absolute;
-    right: 5rem;
-    bottom: 2.5rem;
-  }
-
-  .details-container {
-    padding: 1.5rem;
-    flex: 1;
-    background: white;
-    border-radius: 2rem;
-    border: rgb(53, 53, 53) 0.1rem solid;
-    border-color: rgb(163, 163, 163);
-  }
-
-  .section-container {
-    gap: 4rem;
-    height: 80%;
-  }
-
-  .section__pic-container {
-    height: 400px;
-    width: 400px;
-    margin: auto 0;
-  }
-</style> -->
-
-<script>
-  import HomeSection from './components/HomeSection.vue';
-  import AboutSection from './components/AboutSection.vue';
-  import ExperienceSection from './components/ExperienceSection.vue';
-  import ProjectsSection from './components/ProjectsSection.vue';
-  import ContactSection from './components/ContactSection.vue';
-  import FooterBar from './components/FooterBar.vue';
-
-  export default {
-    components: {
-      HomeSection,
-      AboutSection,
-      ExperienceSection,
-      ProjectsSection,
-      ContactSection,
-      FooterBar,
-    }
-  }
-</script>
-
-<template>
-  <HomeSection />
-  <AboutSection />
-  <ExperienceSection />
-  <ProjectsSection />
-  <ContactSection />
-  <FooterBar />
-</template>
+</style>
