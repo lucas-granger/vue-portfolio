@@ -94,7 +94,7 @@
   export default {
     methods: {
       locProjects() {
-        location.href='./projects'
+        location.href='./#projects'
       },
     },
   }

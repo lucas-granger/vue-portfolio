@@ -3,10 +3,10 @@
     <div class="logo">Lucas Granger</div>
     <div>
       <ul class="nav-links">
-        <li><a href="/about">About</a></li>
-        <li><a href="/experience">Experience</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#experience">Experience</a></li>
+        <li><a href="/#projects">Projects</a></li>
+        <li><a href="/#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -19,10 +19,10 @@
         <span></span>
       </div>
       <div class="menu-links">
-        <li><a href="/about" @click="toggleMenu">About</a></li>
-        <li><a href="/experience" @click="toggleMenu">Experience</a></li>
-        <li><a href="/projects" @click="toggleMenu">Projects</a></li>
-        <li><a href="/contact" @click="toggleMenu">Contact</a></li>
+        <li><a href="/#about" @click="toggleMenu">About</a></li>
+        <li><a href="/#experience" @click="toggleMenu">Experience</a></li>
+        <li><a href="/#projects" @click="toggleMenu">Projects</a></li>
+        <li><a href="/#contact" @click="toggleMenu">Contact</a></li>
       </div>
     </div>
   </nav>
@@ -61,7 +61,7 @@
         window.open('./CV-Lucas.pdf');
       },
       locResume() {
-        location.href = './contact'
+        location.href = './#contact'
       },
       locLinkedIn() {
         location.href='https://www.linkedin.com/in/lucas-granger-960325239/'
@@ -78,11 +78,14 @@
 /*------------------------GENERAL--------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  scroll-behavior: smooth;
 }
 
 p {
@@ -149,121 +152,6 @@ a:hover {
   height: 24px;
   width: 30px;
   cursor: pointer;
-}
-
-@media screen and (max-width: 1400px) {
-  #profile {
-    height: 83vh;
-    margin-bottom: 6rem;
-  }
-
-  .about-containers {
-    flex-wrap: wrap;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  #desktop-nav {
-    display: none;
-  }
-
-  #hamburger-nav {
-    display: flex;
-  }
-
-  #experience, .experience-details-conatainer {
-    margin-top: 2rem;
-  }
-
-  #profile, .section-container {
-    display: block;
-  }
-
-  .arrow {
-    display: none;
-  }
-
-  section, .section-container {
-    height: fit-content;
-  }
-
-  section {
-    margin: 0 5%;
-  }
-
-  .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 aauto 2rem;
-  }
-
-  .about-containers {
-    margin-top: 0;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  #contact, footer {
-    height: 40vh;
-  }
-
-  #profile {
-    height: 83vh;
-    margin-bottom: 0;
-  }
-
-  article {
-    font-size: 1rem;
-  }
-
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
-  }
-
-  .about-containers, .contact-info-upper-container, .btn-container {
-    flex-wrap: wrap;
-  }
-
-  .contact-info-container {
-    margin: 0;
-  }
-
-  .contact-info-container p, .nav-links li a {
-    font-size: 1rem;
-  }
-
-  .experience-sub-title {
-    font-size: 1.25rem;
-  }
-
-  .logo {
-    font-size: 1.5rem;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
-  }
-
-  .section__pic-container {
-    width: auto;
-    height: 46vw;
-    justify-content: center;
-  }
-
-  .section__text__p2 {
-    font-size: 1.25rem;
-  }
-
-  .title {
-    font-size: 2rem;
-  }
-
-  .text-container {
-    text-align: justify;
-  }
 }
 
 .hamburger-icon span {

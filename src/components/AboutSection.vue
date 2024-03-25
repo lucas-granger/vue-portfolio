@@ -4,7 +4,7 @@
     <h1 class="title">About Me</h1>
     <div class="section-container">
       <div class="section__pic-container">
-        <img src="@/assets/about-pic.png" alt="Profile picture" class="about-pic">
+        <img src="@/assets/about-pic.jpeg" alt="Profile picture" class="about-pic">
       </div>
       <div class="about-details-container">
         <div class="about-containers">
@@ -32,7 +32,7 @@
   export default {
     methods: {
       locExp() {
-        location.href = './experience'
+        location.href = './#experience'
       },
     },
   }
@@ -87,5 +87,6 @@
     height: 400px;
     width: 400px;
     margin: auto 0;
+    margin-bottom: 1.5rem;
   }
 </style>

@@ -56,7 +56,7 @@
   export default {
     methods: {
       locResume() {
-          location.href = './contact'
+          location.href = './#contact'
       },
     }
   }
