@@ -28,6 +28,10 @@
 </template>
 
 <style>
+  html {
+  scroll-behavior: smooth;
+}
+
   @media screen and (max-width: 1400px) {
   #profile {
     height: 83vh;

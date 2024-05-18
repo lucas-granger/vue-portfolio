@@ -3,10 +3,10 @@
     <div class="logo">Lucas Granger</div>
     <div>
       <ul class="nav-links">
-        <li><a href="/#about">About</a></li>
-        <li><a href="/#experience">Experience</a></li>
-        <li><a href="/#projects">Projects</a></li>
-        <li><a href="/#contact">Contact</a></li>
+        <li><router-link to="/about#about" class=nav-link>About</router-link></li>
+        <li><router-link to="/experience#experience" class=nav-link>Experience</router-link></li>
+        <li><router-link to="/projects#projects" class=nav-link>Projects</router-link></li>
+        <li><router-link to="/contact#contact" class=nav-link>Contact</router-link></li>
       </ul>
     </div>
   </nav>
@@ -19,10 +19,10 @@
         <span></span>
       </div>
       <div class="menu-links">
-        <li><a href="/#about" @click="toggleMenu">About</a></li>
-        <li><a href="/#experience" @click="toggleMenu">Experience</a></li>
-        <li><a href="/#projects" @click="toggleMenu">Projects</a></li>
-        <li><a href="/#contact" @click="toggleMenu">Contact</a></li>
+        <li><router-link to="/#about" class=nav-link @click="toggleMenu">About</router-link></li>
+        <li><router-link to="/#experience" class=nav-link @click="toggleMenu">Experience</router-link></li>
+        <li><router-link to="/#projects" class=nav-link @click="toggleMenu">Projects</router-link></li>
+        <li><router-link to="/#contact" class=nav-link @click="toggleMenu">Contact</router-link></li>
       </div>
     </div>
   </nav>
@@ -48,8 +48,6 @@
 
 <script>
   export default {
-    // eslint-disable-next-line
-    
     methods: {
       toggleMenu() {
         const menu = document.querySelector(".menu-links");
@@ -93,7 +91,7 @@ p {
 }
 
 /*------------------------TRANSITION--------------------------*/
-a, .btn {
+.nav-link, .btn {
   transition: all 300ms ease;
 }
 
@@ -114,13 +112,13 @@ nav {
   font-size: 1.5rem;
 }
 
-a {
+.nav-link {
   color: black;
   text-decoration: none;
   text-decoration-color: white;
 }
 
-a:hover {
+.nav-link:hover {
   color: grey;
   text-decoration: underline;
   text-underline-offset: 1rem;
@@ -172,7 +170,7 @@ a:hover {
   transition: all 0.3 ease-in-out;
 }
 
-.menu-links a{
+.menu-links .nav-link{
   display: block;
   padding: 10px;
   text-align: center;
