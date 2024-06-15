@@ -16,11 +16,13 @@
           <div class="details-container">
           <img src="@/assets/education.png" alt="Education Icon" class="icon">
             <h3>Education</h3>
-            <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
+            <p>Engineer Degree<br />Master in Business Intelligence and Big Data</p>
           </div>
         </div>
         <div class="text-container">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro asperiores ratione veniam qui rerum vitae, quis odio assumenda neque sunt odit obcaecati optio iste architecto fugit aliquam nam laboriosam necessitatibus quas molestias impedit reiciendis cupiditate aperiam ab. Sunt corrupti optio, cumque eos cum animi impedit sapiente mollitia accusantium dolores! Ipsum!</p>
+          <p>I'm Lucas Granger, an intern developer at Digital Product Simulation, specializing in databases, aeronautics, and aerospace. I have a solid foundation in various programming languages and I am proficient in using tools such as Scikit-learn, TensorFlow and MongoDB.</p>
+          <p>During my internship, I made objects taggable on the fly using Ontology Common Language (OCL) tags and assisted in creating a training program for OCL. I also have a strong knowledge of databases, SQL, the Vue framework, and web semantics.</p>
+          <p>Passionate about piloting and playing the violin, I bring both technical expertise and creative problem-solving to my work. With a two-year engineering background across various sectors, I'm eager to further explore machine learning, AI, and database management to drive innovation in these fields.</p>
         </div>
       </div>
     </div>
@@ -64,7 +66,7 @@
 
   .arrow {
     position: absolute;
-    right: 5rem;
+    right: -5rem;
     bottom: 2.5rem;
   }
 
@@ -88,5 +90,8 @@
     width: 400px;
     margin: auto 0;
     margin-bottom: 1.5rem;
+  }
+  .text-container p{
+    padding-bottom: 15px;
   }
 </style>

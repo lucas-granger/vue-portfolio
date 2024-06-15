@@ -2,7 +2,7 @@
   import HomeSection from './components/HomeSection.vue';
   import AboutSection from './components/AboutSection.vue';
   import ExperienceSection from './components/ExperienceSection.vue';
-  import ProjectsSection from './components/ProjectsSection.vue';
+  //import ProjectsSection from './components/ProjectsSection.vue';
   import ContactSection from './components/ContactSection.vue';
   import FooterBar from './components/FooterBar.vue';
 
@@ -11,7 +11,7 @@
       HomeSection,
       AboutSection,
       ExperienceSection,
-      ProjectsSection,
+      //ProjectsSection,
       ContactSection,
       FooterBar,
     }
